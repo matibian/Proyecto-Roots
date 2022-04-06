@@ -219,11 +219,12 @@ body {
     color: #4D3C41;
     font-size: 30px;
     list-style: none;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     font-weight: 600;
     opacity: 0.9;
     padding: 0vh 5vh;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
+    justify-items: center;
 
 }
 
@@ -267,7 +268,7 @@ body {
     padding: 2px;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    transform: translateY(-100px);
+    transform: translateY(-94.5px);
     border-radius: 20px;
     font-weight: bolder;
 }
