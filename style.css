@@ -1,0 +1,551 @@
+@import url(https://allfont.es/allfont.css?fonts=garamond-bold);
+
+* {
+    Margin:0;   
+    padding:0;
+    font-family: garamond, 'Times New Roman', Times, serif;
+}
+
+header {
+    position: fixed;
+    background-color: #e8e4e4;
+    width: 100%;
+}
+
+body {
+    background-color: #e8e4e4;
+}
+
+.container-header{
+    display: grid;
+    grid-template-areas: "logo menu idioma";
+    grid-template-columns: 220px auto 70px;
+    align-items: center;
+    opacity: 0.95;
+    height: 66.9px;
+    z-index: 2;
+}
+
+.menu__productos {
+    display: flex;
+    justify-content: end;
+}
+
+
+.menu ul {
+
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.menu ul li {
+    background-color:#e8e4e4;
+}
+
+.menu ul a {
+    color:#4D3C41;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:garamond bold, Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    top: 50%;
+
+}   
+
+.menu ul li {
+    float:left;
+    margin:0;
+    padding:0;
+    align-items: center;
+}
+
+.menu ul li:hover {
+    background:#8AA254;
+}
+
+/* menu desplegable */
+
+.menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+    border: solid;
+}
+
+   /* items del menu desplegable */
+
+.menu ul ul li {
+    float:none;
+    width:200px
+}
+
+   /* enlaces de los items del menu desplegable */
+
+.menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+}
+
+   /* items del menu desplegable al pasar el ratón */
+
+.menu ul li:hover ul {
+    display:block;
+}
+
+.menu__idiomas {
+    list-style:none;
+    grid-area: idioma;
+    justify-self: center;
+    border-left: solid;
+    border-left-color: #4D3C41;
+}
+
+.menu__idiomas:hover {
+    background:#8AA254;
+}
+
+.menu__ham {
+    display:none;
+}
+
+.menu__idiomas a {
+
+    color:#4D3C41;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    font-family:garamond bold, Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    top: 50%;
+    
+}
+
+.container-footer {
+    display: grid;
+    background-color: #e8e4e4;
+    color: #4D3C41;
+    grid-template-rows: 5vh 5vh 5vh;
+    justify-content: center;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+
+.container-footer h2 {
+    justify-content: center;
+}
+
+                                                /* HOME */
+
+.about {
+    background-color: #4D3C41;
+    color: #e8e4e4;
+}
+
+
+.about .about__pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+
+
+.about_p {
+    font-size: 30px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    background-image: url( './assets/logomarron.svg' );
+    background-size: cover;
+    background-position: 0vh -73vh;}
+
+.about_p p {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* Video con efecto Parallax */
+.about .about__video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -999; 
+    position: fixed;
+    top:0;
+    margin-top: 70px;
+}
+
+/* .about__video{ 
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+} */
+
+/* .container-fluid{
+    width:100%;
+    } */
+
+.parallax{
+    height:500px;
+    background-image:url('./assets/tractor1.mp4');
+    background-size:cover;
+    background-attachment: fixed;
+    }
+
+.productos {
+    background-color: #e8e4e4;
+    color: #4D3C41;
+    margin-top: 35vh;
+}
+
+.productos__titulo {
+    font-size: 50px;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.container-productos {
+    display: grid;
+    grid-template: repeat(2, 30vh) / repeat(4, 1fr);
+    color: #4D3C41;
+    font-size: 30px;
+    list-style: none;
+    justify-content: space-evenly;
+    font-weight: 600;
+    opacity: 0.9;
+    padding: 0vh 5vh;
+    grid-row-gap: 20px;
+
+}
+
+.container-productos .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container-productos .card .face{
+    width: 30vh;
+    height: 20vh;
+    transition: 0.5s;
+}
+.container-productos .card .face.face1{
+    position: relative;
+    /* background-image: url(../assets/honey.jpeg); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(58px);
+    border-radius: 20px;
+}
+
+
+.container-productos .card:hover .face.face1{
+    background-image: url(../assets/honey.jpeg);
+    transform: translateY(50px);
+    filter: brightness(150%);
+    /* opacity: 0.85; */
+}
+.container-productos .card .face.face2{
+    position: relative;
+    color: #4D3C41;
+    font-size: 30px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100px);
+    border-radius: 20px;
+    font-weight: bolder;
+}
+.container-productos .card:hover .face.face2{
+    transform: translateY(-60px);
+}
+.container-productos .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+#HONEY {
+    background-image: url(./assets/honey.jpeg);
+}
+
+#OLIVEOIL {
+    background-image: url(./assets/oliveOil.jpeg);
+}
+
+#CHEESE {
+    background-image: url(./assets/cheese.jpeg);
+}
+
+#NUT {
+    background-image: url(./assets/nut.jpeg);
+}
+
+#GARLIC {
+    background-image: url(./assets/garlic.jpeg);
+}
+
+#PEANUT {
+    background-image: url(./assets/peanut.jpeg);
+}
+
+#BEANS {
+    background-image: url(./assets/beans.jpeg);
+}
+
+#FRUIT {
+    background-image: url(./assets/dry.jpeg);
+}
+
+
+
+
+/* .productos li:hover {
+    opacity: 0.5;
+    transform: translate(0px, -15px);
+    
+}
+
+
+
+.productos__honey {
+    display: grid;
+    background-image: url(assets/honey.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+
+}
+
+.productos__honey p {
+    align-items: end;
+
+}
+
+.productos__olive {
+    background-image: url(assets/oliveOil.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.productos__cheese {
+    background-image: url(assets/cheese.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.productos__nut {
+    background-image: url(assets/nut.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.productos__garlic {
+    background-image: url(assets/garlic.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.productos__peanut {
+    background-image: url(assets/peanut.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.productos__beans {
+    background-image: url(assets/beans.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.productos__dry {
+    background-image: url(assets/dry.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+} */
+
+                                    /* PRODUCT PAGE */
+
+.productpage {
+    color: #4D3C41;
+    background-color: #e8e4e4;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.productpage__products {
+    display: flex;
+    flex-direction: column;
+}
+
+.productpage__products img {
+    width: 90%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 2%;
+}
+
+.productpage__products img:hover {
+    opacity: 0.5;
+}
+
+#productpage__pic {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    
+}
+
+
+                                    /* ABOUT PAGE */
+
+.aboutus {
+    background-color: #e8e4e4;
+    color: #4D3C41;
+}
+
+.aboutus h1 {
+    text-align: center;
+}
+
+.aboutus__art {
+    padding: 5vh;
+}
+
+#aboutpage__pic {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+.container__misvis {
+    display: grid;
+    grid-template-areas: 
+    "mision mision vision vision"
+    "values values values values"
+    "commit quality integrity teamwork";
+    margin: 5vh;
+    justify-content: space-between;
+}
+
+.container__misvis article {
+    padding: 3%;
+}
+
+.container__misvis article center {
+    justify-content: center;
+    font-weight: bolder;
+    padding: 3%;
+}
+
+
+.mision {
+    grid-area: mision;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.values {
+    grid-area: values;
+    justify-self: center;
+    font-weight: bolder;
+}
+
+.commit {
+    grid-area: commit;
+}
+
+.quality {
+    grid-area: quality;
+}
+
+.integrity {
+    grid-area: integrity;
+}
+
+.teamwork {
+    grid-area: teamwork;
+}
+
+
+
+
+
+                                            /*  MEDIA QUERIES */
+
+@media screen and (max-width:780px)   {
+    .menu {
+        display: none;
+    }
+
+    .menu__idiomas {
+        display: none;
+    }
+    
+    .menu__ham {
+        display: flex;
+        justify-content: right;
+        color: #4D3C41;
+        font-size: 30px;
+    }
+
+    .container-productos {
+        grid-template: repeat(4, 20vh) / repeat(2, 1fr);
+        grid-row-gap: 10vh;
+
+        margin: 0px;
+        padding: 0vh 18vh;
+        grid-column-gap: 2vh;
+    }
+
+    .container-productos .card .face.face2{
+        transform: translateY(-60px);
+
+    }
+
+    .container__misvis {
+        display: grid;
+        grid-template-areas: 
+        "mision mision"
+        " vision vision"
+        "values values"
+        "commit quality" 
+        "integrity teamwork";
+        margin: 20vh;
+        justify-content: space-between;
+    }
+
+}
+
+
+@media screen and (max-width:670px)   {
+
+    .about_p {
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+        background-image: url( './assets/logomarron.svg' );
+        background-size: cover;
+        background-position: 0vh -23vh;}
+
+
+}
+
+/* .container-products{
+    width: 1000px;
+    position: relative;
+    justify-content: space-between;
+    margin: 15px auto;
+} */
+
